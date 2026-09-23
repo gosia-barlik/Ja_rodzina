@@ -31,6 +31,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 img {
   display: block;
@@ -182,103 +183,28 @@ a {
 }
 
 .hero {
+  position: relative;
+  width: 100%;
   min-height: 800px;
   padding-top: 155px;
   padding-bottom: 78px;
+  background-image: linear-gradient(90deg, rgba(246, 241, 233, 0.75), rgba(246, 241, 233, 0.2)), url("assets/hero.jpg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.hero-inner {
   display: grid;
   grid-template-columns: 1.02fr 0.98fr;
   align-items: center;
   gap: 82px;
-  overflow: hidden;
 }
-.eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin: 0 0 25px;
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
+.hero-copy {
+  color: var(--ink);
 }
-.eyebrow > span {
-  width: 34px;
-  height: 1px;
-  background: var(--turquoise);
-}
-.hero h1,
-h2 {
-  margin: 0;
-  font-family: var(--serif);
-  font-weight: 400;
-  line-height: 1.06;
-  letter-spacing: -0.045em;
-}
-.hero h1 {
-  max-width: 670px;
-  font-size: clamp(54px, 6.1vw, 86px);
-}
-.hero h1 em {
-  color: var(--turquoise);
-  font-weight: 400;
-}
-.hero-lead {
-  max-width: 620px;
-  margin: 30px 0 34px;
-  color: var(--ink-soft);
-  font-size: 19px;
-  line-height: 1.65;
-}
-.hero-actions {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 26px;
-}
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 26px;
-  min-height: 56px;
-  padding: 0 25px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  transition: 0.25s;
-}
-.button-primary {
-  color: white;
-  background: var(--forest);
-  box-shadow: 0 10px 32px rgba(22, 55, 58, 0.18);
-}
-.button-primary:hover,
-.button-primary:focus-visible {
-  background: var(--turquoise);
-  transform: translateY(-2px);
-}
-.text-link {
-  font-size: 14px;
-  font-weight: 700;
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-.hero-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px 30px;
-  margin: 38px 0 0;
-  padding: 0;
-  color: var(--ink-soft);
-  list-style: none;
-  font-size: 13px;
-}
-.hero-meta span {
-  margin-right: 7px;
-  color: var(--turquoise);
-  font-weight: 800;
-}
+
+/* do sprawdzenia, czy używane  */
 .hero-visual {
   position: relative;
   min-height: 610px;
@@ -346,6 +272,98 @@ h2 {
   height: 260px;
   border: 1px solid rgba(217, 118, 86, 0.35);
   border-radius: 50%;
+}
+/* dotąd sprawdzić */
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 25px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.eyebrow > span {
+  width: 34px;
+  height: 1px;
+  background: var(--turquoise);
+}
+.hero h1,
+h2 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: -0.045em;
+}
+.hero h1 {
+  max-width: 670px;
+  font-size: clamp(42px, 4.5vw, 64px);
+  color: var(--ink);
+}
+.hero h1 em {
+  color: var(--turquoise);
+  font-weight: 400;
+}
+.hero-lead {
+  max-width: 620px;
+  margin: 30px 0 34px;
+  color: rgba(24, 48, 51, 0.8);
+  font-size: 19px;
+  line-height: 1.65;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  min-height: 56px;
+  padding: 0 25px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: 0.25s;
+}
+.button-primary {
+  color: white;
+  background: var(--forest);
+  box-shadow: 0 10px 32px rgba(22, 55, 58, 0.18);
+}
+.button-primary:hover,
+.button-primary:focus-visible {
+  background: var(--turquoise);
+  transform: translateY(-2px);
+}
+.text-link {
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px 30px;
+  margin: 38px 0 0;
+  padding: 0;
+  color: rgba(24, 48, 51, 0.8);
+  list-style: none;
+  font-size: 13px;
+}
+.hero-meta span {
+  margin-right: 7px;
+  color: var(--forest);
+  font-weight: 800;
 }
 
 .trust-strip {
@@ -537,6 +555,8 @@ h2 {
   aspect-ratio: 4 / 5.25;
   object-fit: cover;
   object-position: center;
+  border-radius: 46% 46% 18px 18px;
+  box-shadow: var(--shadow);
 }
 .about-badge {
   position: absolute;

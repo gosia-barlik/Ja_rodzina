@@ -1,4 +1,4 @@
-# Strona one-page — psychoterapia i doradztwo zawodowe
+# Strona one-page — terapia systemowa
 
 Statyczna, responsywna strona przygotowana w HTML, CSS i JavaScript. Nie wymaga instalowania bibliotek ani budowania projektu.
 
@@ -30,10 +30,6 @@ Następnie otwórz adres `http://localhost:8000` albo adres podany przez `serve`
 - `assets/` — fotografie używane na stronie.
 
 Najważniejsze kolory znajdują się na początku `styles.css` jako zmienne w sekcji `:root`.
-
-## Dane demonstracyjne
-
-Imię i nazwisko „Anna Nowak”, opis kwalifikacji, adres e-mail oraz numer telefonu są przykładowe. Przed publikacją należy je podmienić na prawdziwe dane psychoterapeutki.
 
 ## Zdjęcia
 

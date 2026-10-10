@@ -51,6 +51,70 @@ a {
 .section {
   padding-block: 132px;
 }
+.privacy-main {
+  padding-block: 150px 100px;
+}
+.privacy-content {
+  max-width: 900px;
+  margin-inline: auto;
+  padding: clamp(28px, 6vw, 72px);
+  border-radius: 4px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
+}
+.privacy-content h1 {
+  margin: 0 0 10px;
+  font-family: var(--serif);
+  font-size: clamp(38px, 6vw, 64px);
+  font-weight: 400;
+  line-height: 1.1;
+}
+.privacy-content .privacy-updated {
+  margin: 0 0 42px;
+  color: var(--ink-soft);
+  font-size: 14px;
+}
+.privacy-content section + section {
+  margin-top: 36px;
+}
+.privacy-content h2 {
+  margin: 0 0 12px;
+  font-family: var(--serif);
+  font-size: clamp(22px, 3vw, 30px);
+  font-weight: 400;
+  line-height: 1.25;
+}
+.privacy-content p {
+  margin: 0 0 14px;
+}
+.privacy-content ul {
+  padding-left: 24px;
+}
+.privacy-content li + li {
+  margin-top: 6px;
+}
+.privacy-content a {
+  color: var(--turquoise);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.privacy-content code {
+  padding: 2px 5px;
+  border-radius: 3px;
+  background: var(--mist);
+  font-size: 0.9em;
+}
+.privacy-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  text-decoration: none;
+}
+.privacy-back:hover,
+.privacy-back:focus-visible {
+  color: var(--turquoise);
+}
 .sr-only {
   position: absolute;
   width: 1px;
